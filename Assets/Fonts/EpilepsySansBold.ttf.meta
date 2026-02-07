@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 422e1c2b38b31d1429f80a445ca88093
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 300
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Epilepsy Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b453c531be961a245af932386de0f21d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
