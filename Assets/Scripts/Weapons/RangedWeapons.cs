@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class RangedWeapons : MonoBehaviour
 {
+    [SerializeField] public enum WeaponType {Pistol, Cannon};
+    [SerializeField] public WeaponType type;
     [SerializeField] private int magSize;
     [SerializeField] private int totalSize;
     [SerializeField] private int reloadTime;

@@ -8,6 +8,7 @@ TagManager:
   - Box
   - MetalBox
   - Ammo
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3175610947
+    locked: 0
+  - name: Weapon
+    uniqueID: 3271800357
     locked: 0
