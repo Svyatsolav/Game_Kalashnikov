@@ -7,6 +7,5 @@ public class CreateGame : MonoBehaviour
     public void ChangeWorldType(int value)
     {
         PlayerPrefs.SetInt("WorldType", value);
-        Debug.Log(value);
     }
 }

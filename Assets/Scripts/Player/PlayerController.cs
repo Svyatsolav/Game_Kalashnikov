@@ -47,7 +47,11 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             if(gun.activeInHierarchy == false) gun.SetActive(true);
-            else if(gun.activeInHierarchy == true) gun.SetActive(false);
+            else if(gun.activeInHierarchy == true)
+            {
+                gun.SetActive(false);
+                RangedWeapons.isReloading = false;
+            }
         }
     }
 

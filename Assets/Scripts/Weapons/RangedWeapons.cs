@@ -16,7 +16,7 @@ public class RangedWeapons : MonoBehaviour
     [SerializeField] Transform shotPoint;
     private float timeBtwShots;
     [SerializeField] private float startTimeBtwShots;
-    private bool isReloading = false;
+    public static bool isReloading = false;
     public static RangedWeapons rw;
 
     void Start()
