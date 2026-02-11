@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [Header(">>>OTHER<<<")]
     [SerializeField] GameObject gun;
+    [SerializeField] private Animator anim;
 
     private void Start()
     {
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour
         hp_text.text = $"HP: {health}/{maxHealth}";
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        if(moveInput != 0) anim.SetBool("isWalking", true);
+        else if(moveInput == 0) anim.SetBool("isWalking", false);
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) rb.velocity = Vector2.up * jumpForce;
 
         if(Input.GetKeyDown(KeyCode.Q))
