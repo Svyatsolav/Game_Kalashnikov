@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [Header(">>>OTHER<<<")]
     [SerializeField] GameObject gun;
-    [SerializeField] private Animator anim;
+    [SerializeField] Animator anim;
 
     private void Start()
     {
@@ -47,15 +47,15 @@ public class PlayerController : MonoBehaviour
         else if(moveInput == 0) anim.SetBool("isWalking", false);
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) rb.velocity = Vector2.up * jumpForce;
 
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            if(gun.activeInHierarchy == false) gun.SetActive(true);
-            else if(gun.activeInHierarchy == true)
-            {
-                gun.SetActive(false);
-                RangedWeapons.isReloading = false;
-            }
-        }
+        //if(Input.GetKeyDown(KeyCode.Q))
+        //{
+            //if(gun.activeInHierarchy == false) gun.SetActive(true);
+            //else if(gun.activeInHierarchy == true)
+            //{
+                //gun.SetActive(false);
+                //RangedWeapons.isReloading = false;
+            //}
+        //}
     }
 
     private void Flip()

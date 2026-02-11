@@ -20,19 +20,25 @@ public class RangedWeapons : MonoBehaviour
     [SerializeField] private float startTimeBtwShots;
     public static bool isReloading = false;
     public static RangedWeapons rw;
+    public Animator anim;
+    private Weapon weapon;
 
     void Start()
     {
         rw = this;
+        weapon = GetComponent<Weapon>();
 
         GameObject ammoTextObj = GameObject.Find("Ammo_text").gameObject;
         ammoText = ammoTextObj.GetComponent<Text>();
     }
     void Update()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+        if(weapon.IsEquipped == true)
+        {
+            Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+        }
 
         if(currentTotalAmmo > totalSize) currentTotalAmmo = totalSize;
 
@@ -40,14 +46,17 @@ public class RangedWeapons : MonoBehaviour
 
         if(isReloading) return;
 
-        if(timeBtwShots <= 0)
+        if(weapon.IsEquipped == true)
         {
-            if(Input.GetMouseButton(0))
+            if(timeBtwShots <= 0)
             {
-                if(currentMagAmmo >= 1) Shoot();
+                if(Input.GetMouseButton(0))
+                {
+                    if(currentMagAmmo >= 1) Shoot();
+                }
             }
+            else timeBtwShots -= Time.deltaTime;
         }
-        else timeBtwShots -= Time.deltaTime;
 
         if(Input.GetKeyDown(KeyCode.R)) StartCoroutine(Reload());
 
@@ -55,6 +64,8 @@ public class RangedWeapons : MonoBehaviour
     }
     private void Shoot()
     {
+        anim.SetTrigger("Attack");
+
         currentMagAmmo--;
         Instantiate(bullet, shotPoint.position, transform.rotation);
         timeBtwShots = startTimeBtwShots;
