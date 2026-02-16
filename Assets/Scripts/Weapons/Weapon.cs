@@ -9,14 +9,13 @@ public class Weapon : MonoBehaviour
     
     [Header("Components")]
     private Collider2D weaponCollider;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     public Animator anim;
 
     void Awake()
     {
         weaponCollider = GetComponent<Collider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,6 +35,10 @@ public class Weapon : MonoBehaviour
         transform.SetParent(holdPoint);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+
+        anim.enabled = true;
+        spriteRenderer.sortingOrder = 1;
+        spriteRenderer.sortingLayerName = "Weapon";
         
         Highlight(false);
     }
@@ -60,13 +63,13 @@ public class Weapon : MonoBehaviour
 
     public void Highlight(bool enable)
     {
-        if (spriteRenderer != null)
-        {
-            if (enable)
-                spriteRenderer.color = Color.yellow;
-            else
-                spriteRenderer.color = Color.white;
-        }
+        //if (spriteRenderer != null)
+        //{
+            //if (enable)
+                //spriteRenderer.color = Color.yellow;
+            //else
+                //spriteRenderer.color = Color.white;
+        //}
     }
 
     void OnTriggerEnter2D(Collider2D other)

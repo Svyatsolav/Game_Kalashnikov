@@ -46,16 +46,6 @@ public class PlayerController : MonoBehaviour
         if(moveInput != 0) anim.SetBool("isWalking", true);
         else if(moveInput == 0) anim.SetBool("isWalking", false);
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) rb.velocity = Vector2.up * jumpForce;
-
-        //if(Input.GetKeyDown(KeyCode.Q))
-        //{
-            //if(gun.activeInHierarchy == false) gun.SetActive(true);
-            //else if(gun.activeInHierarchy == true)
-            //{
-                //gun.SetActive(false);
-                //RangedWeapons.isReloading = false;
-            //}
-        //}
     }
 
     private void Flip()
