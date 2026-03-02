@@ -9,6 +9,7 @@ TagManager:
   - MetalBox
   - Ammo
   - NPC
+  - Minecart
   layers:
   - Default
   - TransparentFX
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3175610947
+    locked: 0
+  - name: Transport
+    uniqueID: 1244296289
     locked: 0

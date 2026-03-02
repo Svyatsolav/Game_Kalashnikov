@@ -55,5 +55,19 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Minecart"))
+        {
+            rb.mass = 0;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Minecart"))
+        {
+            rb.mass = 1;
+        }
+    }
     
 }
