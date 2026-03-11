@@ -10,6 +10,7 @@ TagManager:
   - Ammo
   - NPC
   - Minecart
+  - Spike
   layers:
   - Default
   - TransparentFX
