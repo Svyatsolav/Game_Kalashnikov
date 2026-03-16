@@ -30,12 +30,19 @@ public class MeleeWeapons : MonoBehaviour
                     Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
                     for(int i = 0; i < enemies.Length; i++)
                     {
-                        // урон
-                        enemies[i].GetComponent<EnemyAI>().TakeDamage(damage);
+                        if(enemies[i].CompareTag("Enemy"))
+                        {
+                            // урон
+                            enemies[i].GetComponent<EnemyAI>().TakeDamage(damage);
 
-                        // откидывание
-                        Vector2 hitDirection = (enemies[i].transform.position - transform.position).normalized;
-                        enemies[i].GetComponent<EnemyAI>().Knockback(hitDirection, knockbackForce);
+                            // откидывание
+                            Vector2 hitDirection = (enemies[i].transform.position - transform.position).normalized;
+                            enemies[i].GetComponent<EnemyAI>().Knockback(hitDirection, knockbackForce);
+                        }
+                        else if(enemies[i].CompareTag("Flower"))
+                        {
+                            enemies[i].GetComponent<Flower_Lvl2>().TakeDamage(damage);
+                        }
                     }
                     timeBtwAttack = startTimeBtwAttack;
                 }

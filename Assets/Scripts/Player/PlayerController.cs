@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,6 +41,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if(health <= 0)
+        {
+            Death();
+        }
+
         hp_text.text = $"HP: {health}/{maxHealth}";
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
@@ -68,6 +74,14 @@ public class PlayerController : MonoBehaviour
         {
             rb.mass = 1;
         }
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+    void Death()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
 }

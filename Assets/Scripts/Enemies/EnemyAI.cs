@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [Header("Компоненты")]
+    [Header("COMPONENTS")]
     [SerializeField] private Transform player;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask obstacleLayer;
     
-    [Header("Параметры движения")]
+    [Header("MOVEMENT")]
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float groundCheckDistance = 0.2f;
     [SerializeField] private float obstacleCheckDistance = 1f;
     [SerializeField] private float raycastHeight = 0.5f;
     
-    [Header("Зона видимости")]
+    [Header("VIEW ZONE")]
     [SerializeField] private float detectionRange = 8f;
     [SerializeField] private float fieldOfView = 60f;
     [SerializeField] private float heightDifference = 5f;
     
-    [Header("Патрулирование (опционально)")]
+    [Header("PATROL")]
     [SerializeField] private Transform[] patrolPoints;
     [SerializeField] private float patrolSpeed = 2f;
     

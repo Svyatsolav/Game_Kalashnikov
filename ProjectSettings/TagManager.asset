@@ -11,6 +11,8 @@ TagManager:
   - NPC
   - Minecart
   - Spike
+  - Rat
+  - Flower
   layers:
   - Default
   - TransparentFX
