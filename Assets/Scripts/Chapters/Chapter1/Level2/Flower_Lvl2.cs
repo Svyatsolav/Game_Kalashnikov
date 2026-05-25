@@ -11,6 +11,8 @@ public class Flower_Lvl2 : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int maxHealth;
     [SerializeField] private Vector3 offset;
+    [SerializeField] LogData logItem;
+    bool dead = false;
 
     public void TakeDamage(int damage)
     {
@@ -23,6 +25,11 @@ public class Flower_Lvl2 : MonoBehaviour
             anim.SetTrigger("death");
             hpBar.gameObject.SetActive(false);
             wall.SetTrigger("open");
+            if(dead == false)
+            {
+                LogScript.instance.AddItem(logItem);
+                dead = true;
+            }
         }
         else hpBar.gameObject.SetActive(health < maxHealth);
         hpBar.transform.position = Camera.main.WorldToScreenPoint(transform.position + offset);

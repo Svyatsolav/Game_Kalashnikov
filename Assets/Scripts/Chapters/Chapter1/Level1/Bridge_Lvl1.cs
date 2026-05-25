@@ -7,6 +7,10 @@ public class Bridge_Lvl1 : MonoBehaviour
     public Animator anim;
     public GameObject sound;
     private bool isSpawned = false;
+    void Start()
+    {
+        isSpawned = false;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))

@@ -10,6 +10,10 @@ public class Generator_Lvl1 : MonoBehaviour
     public SpriteRenderer _sprite;
     public Sprite genOn;
     public Animator interText;
+    void Start()
+    {
+        isOn = false;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player")) can = true;

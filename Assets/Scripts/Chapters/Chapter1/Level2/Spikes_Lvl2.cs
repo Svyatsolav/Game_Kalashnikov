@@ -8,7 +8,7 @@ public class Spikes_Lvl2 : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().TakeDamage(1);
+            other.GetComponent<PlayerController>().TakeDamage(50);
         }
     }
     void OnTriggerExit2D(Collider2D other)

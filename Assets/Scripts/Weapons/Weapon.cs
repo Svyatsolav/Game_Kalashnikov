@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour
     [Header("Weapon Settings")]
     public WeaponManager.WeaponType weaponType;
     public string weaponName;
+    public LogData logItem;
     public bool IsEquipped { get; private set; }
     
     [Header("Components")]
@@ -41,6 +42,8 @@ public class Weapon : MonoBehaviour
         spriteRenderer.sortingLayerName = "Weapon";
         
         Highlight(false);
+
+        LogScript.instance.AddItem(logItem);
     }
 
     public void Drop(Vector2 dropPosition)

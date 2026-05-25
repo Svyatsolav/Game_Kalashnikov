@@ -23,7 +23,7 @@ TagManager:
   - Solid
   - Weapon
   - Enemy
-  - 
+  - UIUI
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Transport
     uniqueID: 1244296289
+    locked: 0
+  - name: Canvas
+    uniqueID: 3958119837
     locked: 0

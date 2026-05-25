@@ -84,10 +84,12 @@ MonoBehaviour:
   enemy:
     serializedVersion: 2
     m_Bits: 256
-  attackRange: 0.55
+  attackRange: 0.65
   damage: 1
   knockbackForce: 5
   anim: {fileID: 3849093620560709818}
+  attackEffect: {fileID: 1388276210359744912, guid: 7dd186756e1e65d4abc7fb91d1467970, type: 3}
+  damageEffect: {fileID: 3404903345278480265, guid: 9ab8e6efaf7ca8249b508c0ccbbdf219, type: 3}
 --- !u!114 &7336262978962354774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 0
   weaponName: Sword
+  logItem: {fileID: 11400000, guid: 6b61670ce8725894499017e1b474d1fc, type: 2}
   spriteRenderer: {fileID: 7780458440833846988}
   anim: {fileID: 3849093620560709818}
 --- !u!58 &1875204847718480757
@@ -138,7 +141,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.65
 --- !u!1 &8846186404660920385
 GameObject:
   m_ObjectHideFlags: 0

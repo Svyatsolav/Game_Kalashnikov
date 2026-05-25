@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aafd2533689444da5182eaec51c95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1871775617016385413}
 --- !u!61 &7882650198608181026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -481,6 +482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  enemyDropItem: {fileID: 1419985218701251886, guid: b278befc338533048a25775d7561e74e, type: 3}
+  logItem: {fileID: 11400000, guid: 21b076f047da0f945a317f7e20fcd56b, type: 2}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

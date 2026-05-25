@@ -12,6 +12,8 @@ public class MeleeWeapons : MonoBehaviour
     [SerializeField] int damage;
     [SerializeField] float knockbackForce;
     [SerializeField] Animator anim;
+    [SerializeField] GameObject attackEffect;
+    [SerializeField] GameObject damageEffect;
     private Weapon weapon;
 
     void Start()
@@ -27,6 +29,7 @@ public class MeleeWeapons : MonoBehaviour
                 if(Input.GetMouseButton(0))
                 {
                     anim.SetTrigger("Attack");
+                    Instantiate(attackEffect, gameObject.transform);
                     Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
                     for(int i = 0; i < enemies.Length; i++)
                     {
@@ -34,6 +37,8 @@ public class MeleeWeapons : MonoBehaviour
                         {
                             // урон
                             enemies[i].GetComponent<EnemyAI>().TakeDamage(damage);
+                            GameObject dmgEffect = Instantiate(damageEffect, enemies[i].transform);
+                            //dmgEffect.transform.SetParent(null); 
 
                             // откидывание
                             Vector2 hitDirection = (enemies[i].transform.position - transform.position).normalized;
@@ -42,6 +47,7 @@ public class MeleeWeapons : MonoBehaviour
                         else if(enemies[i].CompareTag("Flower"))
                         {
                             enemies[i].GetComponent<Flower_Lvl2>().TakeDamage(damage);
+                            GameObject dmgEffect = Instantiate(damageEffect, enemies[i].transform);
                         }
                     }
                     timeBtwAttack = startTimeBtwAttack;

@@ -9,6 +9,11 @@ public class Minecart_Lvl1 : MonoBehaviour
     public Rigidbody2D minecart;
     public Animator interText;
     public Animator anim;
+    void Start()
+    {
+        isOn = false;
+        can = false;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player")) can = true;

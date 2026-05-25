@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
 {
     [Header("COMPONENTS")]
     [SerializeField] private Transform player;
+    [SerializeField] GameObject enemyDropItem;
+    [SerializeField] LogData logItem;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask obstacleLayer;
     
@@ -31,6 +33,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Slider hpBar;
     [SerializeField] private int health;
     [SerializeField] private int maxHealth;
+    public bool dead = false;
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private bool isPlayerDetected = false;
@@ -61,6 +64,18 @@ public class EnemyAI : MonoBehaviour
             bc.enabled = false;
             rb.bodyType = RigidbodyType2D.Static;
             hpBar.gameObject.SetActive(false);
+            LogScript.instance.AddItem(logItem);
+            if(dead == false)
+            {
+                int rand = Random.Range(1, 10);
+                if(rand == 1) 
+                {
+                    GameObject drop = Instantiate(enemyDropItem, gameObject.transform);
+                    drop.transform.SetParent(null); 
+                }
+                PlayerController.money++;
+                dead = true;
+            }
         }
         else
         {

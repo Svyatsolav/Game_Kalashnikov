@@ -12,6 +12,11 @@ public class ElectricButton_Lvl1 : MonoBehaviour
     public static bool isGenOn;
     public SpriteRenderer _sprite;
     public Sprite activeSprite;
+    void Start()
+    {
+        isOn = false;
+        can = false;
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player")) 
