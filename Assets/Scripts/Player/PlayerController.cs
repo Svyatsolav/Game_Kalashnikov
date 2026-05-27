@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     public static int mangoCount;
     public static bool isTntPickedUp;
     public int gameCompleteCount;
+    public GameObject tntIcon;
 
     private void Start()
     {
@@ -114,6 +115,9 @@ public class PlayerController : MonoBehaviour
             gameTime += Time.deltaTime;
             UpdateTimerUI();
         }
+
+        if(isTntPickedUp == false) tntIcon.SetActive(false);
+        if(isTntPickedUp == true) tntIcon.SetActive(true);
 
         moneyText.text = money.ToString();
         PlayerPrefs.SetInt("money", money);

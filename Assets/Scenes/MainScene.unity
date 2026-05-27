@@ -6359,7 +6359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -420}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250818050
@@ -6470,7 +6470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTiltAngle: 0
   tiltSmoothSpeed: 0
-  hoverScale: 1.2
+  hoverScale: 1.1
   scaleSmoothSpeed: 10
 --- !u!1 &250977662
 GameObject:
@@ -6791,7 +6791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &264847512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6919,7 +6919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTiltAngle: 0
   tiltSmoothSpeed: 0
-  hoverScale: 1.2
+  hoverScale: 1.1
   scaleSmoothSpeed: 10
 --- !u!1 &277896291
 GameObject:
@@ -10852,7 +10852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500585100
@@ -10963,7 +10963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTiltAngle: 0
   tiltSmoothSpeed: 0
-  hoverScale: 1.2
+  hoverScale: 1.1
   scaleSmoothSpeed: 10
 --- !u!1 &503009184
 GameObject:
@@ -18509,7 +18509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTiltAngle: 0
   tiltSmoothSpeed: 0
-  hoverScale: 1.2
+  hoverScale: 1.1
   scaleSmoothSpeed: 10
 --- !u!1 &891599542
 GameObject:
@@ -28519,7 +28519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 820, y: 400}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396405091
@@ -28630,7 +28630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTiltAngle: 0
   tiltSmoothSpeed: 0
-  hoverScale: 1.2
+  hoverScale: 1.1
   scaleSmoothSpeed: 10
 --- !u!1 &1397739217
 GameObject:

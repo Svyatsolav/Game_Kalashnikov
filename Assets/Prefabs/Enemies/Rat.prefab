@@ -505,6 +505,7 @@ MonoBehaviour:
   hpBar: {fileID: 8028774965411493476}
   health: 3
   maxHealth: 3
+  dead: 0
 --- !u!61 &2249867347763833770
 BoxCollider2D:
   m_ObjectHideFlags: 0
